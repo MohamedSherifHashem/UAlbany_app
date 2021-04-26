@@ -17,18 +17,18 @@ export default function Servicelist({ navigation }) {
       <View style={{ backgroundColor: '#B19CD9', flex: 1, alignItems: 'center', justifyContent: 'center' }}>
   
   
-          <Button  size = "large" color="#777777"  onPress={() => navigation.navigate('Details')}>More Details</Button>
+          <Button  size = "large" color="#777777"  onPress={() => navigation.navigate('JobInfo')}>Job Info</Button>
         <Button size = "large" color="green" onPress={()=>Alert.alert("Continue ","Are you sure you want to continue?",[
            {text: "Yes", onPress: console.log("Yes")},
            {text: "No", onPress: console.log("No")},
           ])}>Financial Services</Button>
-        <Button size = "large" color="theme">Family Services </Button>
-        <Button size = "large" color="orange">Mental Health</Button>
+        <Button size = "large" color="theme"  onPress={() => navigation.navigate('JobBoard')} > Job Board </Button>
+        <Button size = "large" color="orange"  onPress={() => navigation.navigate('SendEmail')} >Send Email</Button>
   
         <Button  size = "large" color="#555555"  onPress={() => navigation.navigate('Name')}>Enter Name</Button>
         <Button  size = "large" color="#32B76A"  onPress={() => navigation.navigate('PhoneNumbers')}>Important Phone Numbers</Button>
-        
-
+        <Button  size = "large" color="#32B76A"  onPress={() => navigation.navigate('EmergencyNumbers')}>Emergency Phone Numbers</Button>
+        <Button  size = "large" color="#32B76A"  onPress={() => navigation.navigate('News')}> News </Button>
   
       </View>
     );
